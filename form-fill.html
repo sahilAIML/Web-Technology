@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labels and Bullets Example</title>
+</head>
+<body>
+
+<div class="container">
+    <h2>Event Registration</h2>
+    
+    <form action="#" method="POST">
+        <!-- Explicit Label using 'for' attribute -->
+        <div class="form-group">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="name" required>
+        </div>
+
+        <!-- Explicit Label for a Dropdown -->
+        <div class="form-group">
+            <label for="workshop">Choose a Workshop:</label>
+            <select id="workshop" name="workshop">
+                <option value="web-dev">Web Development Basics</option>
+                <option value="ui-ux">UI/UX Design Essentials</option>
+                <option value="data-science">Data Science Intro</option>
+            </select>
+        </div>
+
+        <!-- Bulleted List showing dynamic rules/info inside a form -->
+        <div class="form-group">
+            <label>Important Workshop Notes:</label>
+            <ul>
+                <li>Please bring your own laptop.</li>
+                <li>Arrive 15 minutes before the start time.</li>
+                <li>Software prerequisites will be emailed to you.</li>
+            </ul>
+        </div>
+
+        <!-- Implicit Label (Input nested inside the label tag) -->
+        <div class="form-group">
+            <label class="checkbox-label">
+                <input type="checkbox" name="terms" required>
+                I agree to the terms and conditions
+            </label>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>

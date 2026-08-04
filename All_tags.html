@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML All Tags Demo</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        div {
+            border: 2px solid blue;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        span {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Headings -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <hr>
+
+    <!-- Paragraph -->
+    <p>This is a paragraph.</p>
+
+    <!-- Line Break -->
+    This is line 1.<br>
+    This is line 2.
+
+    <hr>
+
+    <!-- Text Formatting -->
+    <h2>Text Formatting</h2>
+
+    <b>Bold Text</b><br>
+    <strong>Strong Text</strong><br>
+
+    <i>Italic Text</i><br>
+    <em>Emphasized Text</em><br>
+
+    <u>Underlined Text</u><br>
+
+    <mark>Highlighted Text</mark><br>
+
+    <small>Small Text</small><br>
+
+    <del>Deleted Text</del><br>
+
+    <ins>Inserted Text</ins><br>
+
+    H<sub>2</sub>O<br>
+
+    x<sup>2</sup><br>
+
+    <hr>
+
+    <!-- Hyperlink -->
+    <h2>Hyperlink</h2>
+
+    <a href="https://www.google.com" target="_blank">
+        Open Google
+    </a>
+
+    <hr>
+
+    <!-- Image -->
+    <h2>Image</h2>
+
+    <img src="https://via.placeholder.com/200"
+        alt="Sample Image">
+
+    <hr>
+
+    <!-- Lists -->
+    <h2>Ordered List</h2>
+
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h2>Unordered List</h2>
+
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Orange</li>
+    </ul>
+
+    <h2>Description List</h2>
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+
+    <hr>
+
+    <!-- Table -->
+    <h2>Table</h2>
+
+    <table>
+
+        <caption>Student Details</caption>
+
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Branch</th>
+        </tr>
+
+        <tr>
+            <td>Sahil</td>
+            <td>20</td>
+            <td>CSE</td>
+        </tr>
+
+        <tr>
+            <td>Ali</td>
+            <td>21</td>
+            <td>AIML</td>
+        </tr>
+
+    </table>
+
+    <hr>
+
+    <!-- Form -->
+    <h2>Registration Form</h2>
+
+    <form>
+
+        <label>Name:</label><br>
+        <input type="text" placeholder="Enter Name"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email"><br><br>
+
+        <label>Age:</label><br>
+        <input type="number"><br><br>
+
+        <label>Date of Birth:</label><br>
+        <input type="date"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+
+        <br><br>
+
+        <label>Skills:</label><br>
+
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS
+        <input type="checkbox"> JavaScript
+
+        <br><br>
+
+        <label>Country:</label>
+
+        <select>
+
+            <option>India</option>
+
+            <option>USA</option>
+
+            <option>Japan</option>
+
+        </select>
+
+        <br><br>
+
+        <label>Address:</label><br>
+
+        <textarea rows="4" cols="30"></textarea>
+
+        <br><br>
+
+        <input type="submit">
+
+        <input type="reset">
+
+        <button type="button">Normal Button</button>
+
+    </form>
+
+    <hr>
+
+    <!-- Div -->
+    <div>
+        This is inside a DIV.
+    </div>
+
+    <br>
+
+    <!-- Span -->
+    This is <span>SPAN</span> element.
+
+    <hr>
+
+    <!-- Semantic HTML -->
+
+    <header>
+        <h2>Website Header</h2>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+
+        <section>
+
+            <h3>Section</h3>
+
+            <article>
+
+                <h4>Article</h4>
+
+                <p>This is an article.</p>
+
+            </article>
+
+        </section>
+
+        <aside>
+
+            Sidebar Content
+
+        </aside>
+
+    </main>
+
+    <footer>
+
+        Copyright © 2026
+
+    </footer>
+
+    <hr>
+
+    <!-- Audio -->
+    <h2>Audio</h2>
+
+    <audio controls>
+        <source src="sample.mp3" type="audio/mpeg">
+    </audio>
+
+    <hr>
+
+    <!-- Video -->
+    <h2>Video</h2>
+
+    <video controls width="300">
+        <source src="sample.mp4" type="video/mp4">
+    </video>
+
+    <hr>
+
+    <!-- Iframe -->
+    <h2>Iframe</h2>
+
+    <iframe src="https://example.com"
+        width="400"
+        height="200">
+    </iframe>
+
+    <!-- JavaScript -->
+    <script>
+
+        console.log("Welcome to HTML!");
+
+        alert("HTML Demo Loaded Successfully!");
+
+    </script>
+
+</body>
+
+</html>

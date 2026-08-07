@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>College Assignment</title>
+</head>
+<!-- A) Creating the 4 Frames named Top, Bottom, Left, and Center -->
+<frameset rows="20%, 70%, 10%">
+    
+    <!-- 1. Top Frame -->
+    <frame name="Top" src="data:text/html,<body bgcolor='lightblue'><h1>[LOGO] Tech Company</h1></body>">
+    
+    <frameset cols="20%, 80%">
+        <!-- 2. Left Frame (Navigation Links) -->
+        <frame name="Left" src="data:text/html,<body bgcolor='lightyellow'>
+            <h3>Menu</h3>
+            <a href='data:text/html,<body><h2>Home</h2><p>Welcome to the Home Page.</p></body>' target='Center'>Home</a><br><br>
+            <a href='data:text/html,<body><h2>Products</h2><p>View our Products here.</p></body>' target='Center'>Products</a><br><br>
+            <a href='data:text/html,<body><h2>Services</h2><p>View our Services here.</p></body>' target='Center'>Services</a><br><br>
+            <a href='data:text/html,<body><h2>Branches</h2><p>Our Branch Locations.</p></body>' target='Center'>Branches</a><br><br>
+            <a href='data:text/html,<body><h2>About Us</h2><p>Information about the company.</p></body>' target='Center'>About</a>
+        </body>">
+        
+        <!-- 3. Center Frame (Contains Part B: The Color Palette) -->
+        <frame name="Center" src="data:text/html,<body>
+            <center>
+                <h2>Move Mouse Over Colors (Part B)</h2>
+                <br><br>
+                <table border='1' cellpadding='40'>
+                    <tr>
+                        <td bgcolor='red' onmouseover='document.body.bgColor=&quot;red&quot;'></td>
+                        <td bgcolor='green' onmouseover='document.body.bgColor=&quot;green&quot;'></td>
+                        <td bgcolor='blue' onmouseover='document.body.bgColor=&quot;blue&quot;'></td>
+                        <td bgcolor='yellow' onmouseover='document.body.bgColor=&quot;yellow&quot;'></td>
+                        <td bgcolor='pink' onmouseover='document.body.bgColor=&quot;pink&quot;'></td>
+                        <td bgcolor='orange' onmouseover='document.body.bgColor=&quot;orange&quot;'></td>
+                    </tr>
+                </table>
+            </center>
+        </body>">
+    </frameset>
+    
+    <!-- 4. Bottom Frame -->
+    <frame name="Bottom" src="data:text/html,<body bgcolor='lightgray'><center>Copyright 2026 Tech Company</center></body>">
+    
+</frameset>
+</html>

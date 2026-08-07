@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Palette</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            transition: background-color 0.3s;
+        }
+
+        .palette {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .color {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function resetColor() {
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Color Palette</h1>
+    <p>Move the mouse over a color to change the background.</p>
+
+    <div class="palette">
+
+        <div class="color"
+             style="background-color:red"
+             onmouseover="changeColor('red')"
+             onmouseout="resetColor()">
+        </div>
+
+        <div class="color"
+             style="background-color:green"
+             onmouseover="changeColor('green')"
+             onmouseout="resetColor()">
+        </div>
+
+        <div class="color"
+             style="background-color:blue"
+             onmouseover="changeColor('blue')"
+             onmouseout="resetColor()">
+        </div>
+
+        <div class="color"
+             style="background-color:yellow"
+             onmouseover="changeColor('yellow')"
+             onmouseout="resetColor()">
+        </div>
+
+        <div class="color"
+             style="background-color:orange"
+             onmouseover="changeColor('orange')"
+             onmouseout="resetColor()">
+        </div>
+
+        <div class="color"
+             style="background-color:purple"
+             onmouseover="changeColor('purple')"
+             onmouseout="resetColor()">
+        </div>
+
+    </div>
+
+</body>
+</html>

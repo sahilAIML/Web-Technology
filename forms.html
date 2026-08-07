@@ -1,123 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Company Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Portal</title>
+    <style>
+        /* CSS Grid Layout to mimic frames */
+        body {
+            margin: 0;
+            display: grid;
+            grid-template-areas: 
+                "top top"
+                "left center"
+                "bottom bottom";
+            grid-template-rows: 80px 1fr 50px;
+            grid-template-columns: 200px 1fr;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Top Frame */
+        .top-frame {
+            grid-area: top;
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .top-frame img {
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+
+        /* Left Frame (Navigation) */
+        .left-frame {
+            grid-area: left;
+            background-color: #ecf0f1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-right: 2px solid #bdc3c7;
+        }
+        .left-frame a {
+            text-decoration: none;
+            color: #2c3e50;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .left-frame a:hover {
+            background-color: #bdc3c7;
+        }
+
+        /* Center Frame */
+        .center-frame {
+            grid-area: center;
+            padding: 0;
+        }
+        /* The iframe acts as the content viewer */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Bottom Frame */
+        .bottom-frame {
+            grid-area: bottom;
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+    </style>
 </head>
+<body>
 
-<frameset rows="20%,70%,10%">
+    <!-- Top Frame: Logo and Title -->
+    <div class="top-frame">
+        <img src="https://via.placeholder.com/100x50?text=LOGO" alt="Company Logo">
+        <h1>Tech Innovators Inc.</h1>
+    </div>
 
-    <!-- TOP FRAME -->
-    <frame srcdoc="
-        <html>
-        <body style='text-align:center; background:lightblue;'>
-            <h1>🏢 ABC Company</h1>
-            <h3>Welcome to ABC Company</h3>
-        </body>
-        </html>
-    ">
+    <!-- Left Frame: Links targeting the iframe -->
+    <div class="left-frame">
+        <!-- Replace the 'data:text/html...' with real files like 'home.html' in your actual project -->
+        <a href="data:text/html,<h2 style='font-family:sans-serif'>Home</h2><p style='font-family:sans-serif'>Welcome to our homepage.</p>" target="center_view">Home</a>
+        <a href="data:text/html,<h2 style='font-family:sans-serif'>Products</h2><p style='font-family:sans-serif'>Browse our latest tech products.</p>" target="center_view">Products</a>
+        <a href="data:text/html,<h2 style='font-family:sans-serif'>Services</h2><p style='font-family:sans-serif'>Explore our enterprise services.</p>" target="center_view">Services</a>
+        <a href="data:text/html,<h2 style='font-family:sans-serif'>Branches</h2><p style='font-family:sans-serif'>Find a location near you.</p>" target="center_view">Branches</a>
+        <a href="data:text/html,<h2 style='font-family:sans-serif'>About Us</h2><p style='font-family:sans-serif'>Learn about our company history.</p>" target="center_view">About</a>
+    </div>
 
-    <!-- MIDDLE: LEFT + CENTER -->
-    <frameset cols="20%,80%">
+    <!-- Center Frame: Iframe to display content -->
+    <div class="center-frame">
+        <iframe name="center_view" src="data:text/html,<h2 style='font-family:sans-serif'>Home</h2><p style='font-family:sans-serif'>Welcome to our homepage.</p>"></iframe>
+    </div>
 
-        <!-- LEFT FRAME -->
-        <frame srcdoc="
-            <html>
-            <body style='background:lightgray;'>
-                <h3>MENU</h3>
+    <!-- Bottom Frame: Copyright -->
+    <div class="bottom-frame">
+        &copy; 2026 Tech Innovators Inc. All rights reserved.
+    </div>
 
-                <a href='javascript:void(0)'>Home</a><br><br>
-                <a href='javascript:void(0)'>Products</a><br><br>
-                <a href='javascript:void(0)'>Services</a><br><br>
-                <a href='javascript:void(0)'>Branches</a><br><br>
-                <a href='javascript:void(0)'>About</a><br><br>
-
-            </body>
-            </html>
-        ">
-
-        <!-- CENTER FRAME -->
-        <frame srcdoc="
-            <html>
-            <head>
-                <style>
-                    body {
-                        text-align:center;
-                        font-family:Arial;
-                    }
-
-                    .box {
-                        width:60px;
-                        height:60px;
-                        display:inline-block;
-                        margin:10px;
-                        border:2px solid black;
-                    }
-
-                    .red { background:red; }
-                    .blue { background:blue; }
-                    .green { background:green; }
-                    .yellow { background:yellow; }
-                    .orange { background:orange; }
-                    .purple { background:purple; }
-                </style>
-            </head>
-
-            <body>
-
-                <h1>Home</h1>
-
-                <p>Welcome to ABC Company</p>
-
-                <h2>Color Palette</h2>
-                <p>Move your mouse over a color</p>
-
-                <div class='box red'
-                     onmouseover='document.body.style.backgroundColor=&quot;red&quot;'>
-                </div>
-
-                <div class='box blue'
-                     onmouseover='document.body.style.backgroundColor=&quot;blue&quot;'>
-                </div>
-
-                <div class='box green'
-                     onmouseover='document.body.style.backgroundColor=&quot;green&quot;'>
-                </div>
-
-                <div class='box yellow'
-                     onmouseover='document.body.style.backgroundColor=&quot;yellow&quot;'>
-                </div>
-
-                <div class='box orange'
-                     onmouseover='document.body.style.backgroundColor=&quot;orange&quot;'>
-                </div>
-
-                <div class='box purple'
-                     onmouseover='document.body.style.backgroundColor=&quot;purple&quot;'>
-                </div>
-
-                <hr>
-
-                <h2>Our Products</h2>
-                <p>Laptops | Mobiles | Software</p>
-
-                <h2>Our Services</h2>
-                <p>Web Development | App Development</p>
-
-            </body>
-            </html>
-        ">
-
-    </frameset>
-
-    <!-- BOTTOM FRAME -->
-    <frame srcdoc="
-        <html>
-        <body style='text-align:center; background:gray;'>
-            <p>© 2026 ABC Company. All Rights Reserved.</p>
-        </body>
-        </html>
-    ">
-
-</frameset>
-
+</body>
 </html>

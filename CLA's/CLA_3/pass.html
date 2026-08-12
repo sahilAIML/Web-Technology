@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <script>
+        function validateForm() {
+
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            // Username validation
+            // Starts with uppercase and contains at least one digit
+            let usernamePattern = /^[A-Z][A-Za-z0-9]*\d[A-Za-z0-9]*$/;
+
+            if (!usernamePattern.test(username)) {
+                alert("Username must start with an uppercase letter and contain at least one digit.");
+                return false;
+            }
+
+            // Email validation
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Password length
+            if (password.length < 8 || password.length > 20) {
+                alert("Password must be between 8 and 20 characters.");
+                return false;
+            }
+
+            // Password must contain:
+            // 1 uppercase
+            // 1 lowercase
+            // 1 special character
+            // Special characters exclude . , ; :
+            let upper = /[A-Z]/;
+            let lower = /[a-z]/;
+            let special = /[^A-Za-z0-9.,;:]/;
+
+            if (!upper.test(password)) {
+                alert("Password must contain at least one uppercase letter.");
+                return false;
+            }
+
+            if (!lower.test(password)) {
+                alert("Password must contain at least one lowercase letter.");
+                return false;
+            }
+
+            if (!special.test(password)) {
+                alert("Password must contain at least one special character.");
+                return false;
+            }
+
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+
+        <label>Username:</label>
+        <input type="text" id="username" required>
+        <br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email" required>
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password" required>
+        <br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+</body>
+</html>

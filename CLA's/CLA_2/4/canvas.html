@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Canvas Objects</title>
+</head>
+
+<body>
+
+    <h1>Different Objects Using HTML5 Canvas</h1>
+
+    <canvas id="myCanvas" width="700" height="500"
+            style="border:2px solid black;">
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 150, 100);
+
+        // Circle
+        ctx.beginPath();
+        ctx.arc(350, 100, 50, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.stroke();
+
+        // Line
+        ctx.beginPath();
+        ctx.moveTo(500, 50);
+        ctx.lineTo(650, 150);
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+        // Triangle
+        ctx.beginPath();
+        ctx.moveTo(100, 250);
+        ctx.lineTo(50, 350);
+        ctx.lineTo(150, 350);
+        ctx.closePath();
+        ctx.fillStyle = "orange";
+        ctx.fill();
+        ctx.stroke();
+
+        // Text
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "purple";
+        ctx.fillText("HTML5 Canvas", 250, 300);
+
+        // Arc
+        ctx.beginPath();
+        ctx.arc(500, 350, 60, 0, Math.PI);
+        ctx.strokeStyle = "brown";
+        ctx.lineWidth = 5;
+        ctx.stroke();
+    </script>
+
+</body>
+</html>

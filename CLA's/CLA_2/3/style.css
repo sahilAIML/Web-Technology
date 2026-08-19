@@ -1,0 +1,15 @@
+/* External CSS */
+
+input[type="button"] {
+    background-color: lightblue;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/* Change background color to red on mouse hover */
+input[type="button"]:hover {
+    background-color: red;
+    color: white;
+}
